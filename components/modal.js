@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React, { useContext } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-
 import { AlturaContext } from "./context/context";
 
 const Modal = () => {
@@ -11,7 +10,7 @@ const Modal = () => {
 
   return (
     <div className="fixed top-0 z-20 h-full  w-screen bg-slate-600 bg-opacity-60 flex justify-center items-center">
-      <div className=" w-4/12 animate-animate h-4/6 bg-gradient-to-r from-blue-400 via-blue-300 to-pink-300 dark:bg-gradient-to-r dark:from-blue-800 dark:via-blue-700 dark:to-pink-500 p-8 gap-8 rounded-xl flex justify-center items-center flex-col relative ">
+      <div className="w-10/12 md:w-4/12 animate-animate h-4/6 bg-gradient-to-r from-blue-400 via-blue-300 to-pink-300 dark:bg-gradient-to-r dark:from-blue-800 dark:via-blue-700 dark:to-pink-500 p-8 gap-8 rounded-xl flex justify-center items-center flex-col relative ">
         <AiOutlineClose
           onClick={() => {
             setModal(false);
