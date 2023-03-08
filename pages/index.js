@@ -8,8 +8,8 @@ export default function Home() {
   const { modal } = useContext(AlturaContext);
   return (
     <>
-      <div className=" w-screen flex justify-center items-center flex-col bg-black">
-          <Navbar/>
+      <div className=" w-screen dark:bg-black bg-white flex justify-center items-center flex-col ">
+        <Navbar />
         <div className=" w-full  justify-center flex mt-10  p-20">
           <Nftcontainer />
         </div>

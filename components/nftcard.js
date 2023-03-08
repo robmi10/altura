@@ -3,24 +3,20 @@ import { AlturaContext } from "./context/context";
 
 const Nftcard = ({ ...props }) => {
   const { setModal } = useContext(AlturaContext);
-  const { address, name, img, price, desc } = props;
+  const { name, image_preview_url, price, description, asset_contract } = props;
 
   return (
-    <div className=" w-5/12 h-auto bg-red-200  border-2 p-10 rounded-xl">
-      <div className=" text-black flex flex-col gap-4">
-        <img className="h-48" src={img} />
+    <div
+      onClick={() => {
+        setModal({ props });
+      }}
+      className="animate-animate md:w-5/12 cursor-pointer shadow-gl shadow-[#185ee041] h-auto bg-gradient-to-r from-blue-400 via-blue-300 to-pink-300 bg-opacity-10 dark:bg-gradient-to-r dark:from-blue-800 dark:via-blue-700 dark:to-pink-500  p-10 rounded-xl"
+    >
+      <div className="   flex flex-col gap-4">
+        <img className="h-62 rounded-md" src={image_preview_url} />
         <span className=" text-3xl font-bold  ">{name} </span>
-        <span className=" text-xl">{desc} </span>
-        <span>{address.substring(0, 10)} </span>
-        <span>{price} ETH</span>
-        <button
-          onClick={() => {
-            setModal({ props });
-          }}
-          className=" w-4/12 bg-black justify-center text-white rounded-full p-2 h-10 flex items-center"
-        >
-          BUY ITEM
-        </button>
+
+        <span>{asset_contract.address.substring(0, 10)} </span>
       </div>
     </div>
   );

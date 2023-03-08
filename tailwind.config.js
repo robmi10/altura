@@ -6,10 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       animation: {
-        animate: "animate 1s ease-in-out",
+        animate: "animate .2s ease-in-out",
+        animateslow: "animate 1s ease-in-out",
         move: "move .5s ease-in-out",
         moveback: "move .5s ease-in-out",
       },
