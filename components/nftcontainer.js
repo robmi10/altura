@@ -3,7 +3,7 @@ import { AlturaContext } from "./context/context";
 import Nftcard from "./nftcard";
 
 const Nftcontainer = () => {
-  const { nftList, setNftList } = useContext(AlturaContext);
+  const { nftList } = useContext(AlturaContext);
   if (!nftList) return false;
 
   return (

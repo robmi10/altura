@@ -3,7 +3,7 @@ import { AlturaContext } from "./context/context";
 
 const Nftcard = ({ ...props }) => {
   const { setModal } = useContext(AlturaContext);
-  const { name, image_preview_url, price, description, asset_contract } = props;
+  const { name, image_preview_url, asset_contract } = props;
 
   return (
     <div
